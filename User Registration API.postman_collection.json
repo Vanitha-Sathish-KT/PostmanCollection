@@ -1,0 +1,227 @@
+{
+  "info": {
+    "_postman_id": "504d96bb-5f02-44e7-bd98-9e80b8cd99a6",
+    "name": "User Registration API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52561620",
+    "_collection_link": "https://go.postman.co/collection/52561620-504d96bb-5f02-44e7-bd98-9e80b8cd99a6?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Register User",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"test3@example.com\",\r\n  \"firstName\": \"John1\",\r\n  \"lastName\": \"Doe1\",\r\n  \"password\": \"securePass123\",\r\n  \"phone\": \"9876543210\",\r\n  \"userName\": \"test3@example.com\",\r\n  \"role\":\"USER\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/users/registerUser",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "users",
+            "registerUser"
+          ]
+        },
+        "description": "Generated from cURL: curl -X POST \"http://localhost:8080/api/v1/users/registerUser\" \\\r\n-H \"Content-Type: application/json\" \\\r\n-d '{\r\n  \"email\": \"test@example.com\",\r\n  \"firstName\": \"John\",\r\n  \"lastName\": \"Doe\",\r\n  \"password\": \"securePass123\",\r\n  \"phone\": \"9876543210\"\r\n}'"
+      },
+      "response": []
+    },
+    {
+      "name": "Login API",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/users/login?username=test3@example.com&password=securePass123",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "users",
+            "login"
+          ],
+          "query": [
+            {
+              "key": "username",
+              "value": "test3@example.com"
+            },
+            {
+              "key": "password",
+              "value": "securePass123"
+            }
+          ]
+        },
+        "description": "Generated from cURL: curl -X POST \"http://localhost:8080/api/v1/users/login?username=testUser&password=securePass123\""
+      },
+      "response": []
+    },
+    {
+      "name": "Fetch User By Id",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0MUBleGFtcGxlLmNvbSIsImlhdCI6MTc3MTg1MjA4MCwiZXhwIjoxNzcxODU1NjgwfQ.zx92txF-aoZCjEEZ5r2QWd1NXSj_Vixh6mFxJ5k89TU"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/users/fetchUserById?id=1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "users",
+            "fetchUserById"
+          ],
+          "query": [
+            {
+              "key": "id",
+              "value": "1"
+            }
+          ]
+        },
+        "description": "Generated from cURL: curl -X GET \"http://localhost:8080/api/v1/users/fetchUserById?id=1\" \\\r\n-H \"Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0QGV4YW1wbGUuY29tIiwiaWF0IjoxNzcxODQ4MDQ1LCJleHAiOjE3NzE4NTE2NDV9.6VgZrLrX37BLXekauqGQ5p81-ClxKtfst9jtgKTIfbo\""
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Users",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0MUBleGFtcGxlLmNvbSIsImlhdCI6MTc3MTg1MjY0NSwiZXhwIjoxNzcxODU2MjQ1fQ.oX9mNVVDpRy5VL4tcHbTwD4WRY6ArnpHLXQqNN_VDdA"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/users/getAllUsers",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "users",
+            "getAllUsers"
+          ]
+        },
+        "description": "Generated from cURL: curl -X GET \"http://localhost:8080/api/v1/users/getAllUsers\" \\\r\n-H \"Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0QGV4YW1wbGUuY29tIiwiaWF0IjoxNzcxODQ4MDQ1LCJleHAiOjE3NzE4NTE2NDV9.6VgZrLrX37BLXekauqGQ5p81-ClxKtfst9jtgKTIfbo\""
+      },
+      "response": []
+    },
+    {
+      "name": "Update User",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0MUBleGFtcGxlLmNvbSIsImlhdCI6MTc3MTg1MjY0NSwiZXhwIjoxNzcxODU2MjQ1fQ.oX9mNVVDpRy5VL4tcHbTwD4WRY6ArnpHLXQqNN_VDdA"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n   \"email\":\"test2@example.com\",\r\n  \"password\": \"newPass456\",\r\n  \"phone\": \"1234567890\",\r\n  \"role\":\"user\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/users/updateUsers/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "users",
+            "updateUsers",
+            "1"
+          ]
+        },
+        "description": "Generated from cURL: curl -X PUT \"http://localhost:8080/api/v1/users/updateUsers/1\" \\\r\n-H \"Content-Type: application/json\" \\\r\n-H \"Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0QGV4YW1wbGUuY29tIiwiaWF0IjoxNzcxODQ4MDQ1LCJleHAiOjE3NzE4NTE2NDV9.6VgZrLrX37BLXekauqGQ5p81-ClxKtfst9jtgKTIfbo\" \\\r\n-d '{\r\n  \"email\": \"updated@example.com\",\r\n  \"firstName\": \"Jane\",\r\n  \"lastName\": \"Smith\",\r\n  \"password\": \"newPass456\",\r\n  \"phone\": \"1234567890\"\r\n}'\r\n"
+      },
+      "response": []
+    },
+    {
+      "name": "Partial Update",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0M0BleGFtcGxlLmNvbSIsImlhdCI6MTc3MTg1Mjc0MywiZXhwIjoxNzcxODU2MzQzfQ.KFP2SUNa6rF3uYwUlFSCEB7zDDqG5fR4NKIBeOXhoV8"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"address\": \"#16 Gandhi Nagar, Bangalore\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/users/partialUpdate/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "users",
+            "partialUpdate",
+            "2"
+          ]
+        },
+        "description": "Generated from cURL: curl -X PATCH \"http://localhost:8080/api/v1/users/partialUpdate/1\" \\\r\n-H \"Content-Type: application/json\" \\\r\n-H \"Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0QGV4YW1wbGUuY29tIiwiaWF0IjoxNzcxODQ4MDQ1LCJleHAiOjE3NzE4NTE2NDV9.6VgZrLrX37BLXekauqGQ5p81-ClxKtfst9jtgKTIfbo\" \\\r\n-d '{\r\n  \"phone\": \"1112223333\"\r\n}'"
+      },
+      "response": []
+    }
+  ]
+}
